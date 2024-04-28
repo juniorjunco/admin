@@ -31,7 +31,7 @@ const AddProduct = () => {
        let formData = new FormData();
        formData.append('product',image);
 
-       await fetch('https://backend-production-0d28.up.railway.app dev /upload',{
+       await fetch('https://backend-production-0d28.up.railway.app/upload',{
             method:'POST',
             headers:{
               Accept:'application/json',
@@ -43,7 +43,7 @@ const AddProduct = () => {
        {
           product.image = responseData.image_url;
           console.log(product);
-          await fetch('https://backend-production-0d28.up.railway.app dev /addproduct',{
+          await fetch('https://backend-production-0d28.up.railway.app/addproduct',{
             method:'POST',
             headers:{
               Accept:'application/json',
